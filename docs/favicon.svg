@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <radialGradient id="body" cx="45%" cy="38%" r="65%">
+      <stop offset="0%" stop-color="#29b6f6" />
+      <stop offset="50%" stop-color="#0288d1" />
+      <stop offset="100%" stop-color="#01579b" />
+    </radialGradient>
+  </defs>
+  <!-- Kitty Face Favicon -->
+  <path d="M 18 14 C 20 18, 22 23, 24 25 C 27 24, 37 24, 40 25 C 42 23, 44 18, 46 14 C 48 22, 53 30, 53 38 C 53 50, 42 56, 32 56 C 22 56, 11 50, 11 38 C 11 30, 16 22, 18 14 Z" fill="url(#body)" stroke="#80d8ff" stroke-width="1.5" />
+  <!-- Eyes -->
+  <ellipse cx="25" cy="38" rx="3.5" ry="4.5" fill="#091424" />
+  <circle cx="23.5" cy="36.5" r="1.5" fill="#ffffff" />
+  <ellipse cx="39" cy="38" rx="3.5" ry="4.5" fill="#091424" />
+  <circle cx="37.5" cy="36.5" r="1.5" fill="#ffffff" />
+  <!-- Blushing Cheeks -->
+  <ellipse cx="23" cy="42" rx="3" ry="1.5" fill="#ff4081" opacity="0.8" />
+  <ellipse cx="41" cy="42" rx="3" ry="1.5" fill="#ff4081" opacity="0.8" />
+  <!-- Cat Mouth -->
+  <path d="M 30 40 Q 31 41.5 32 40.5 Q 33 41.5 34 40" stroke="#091424" stroke-width="1" stroke-linecap="round" fill="none" />
+</svg>
