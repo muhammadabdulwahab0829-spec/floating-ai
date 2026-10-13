@@ -16,8 +16,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script>
-      // Decode GitHub Pages SPA redirect from 404.html if present
+      // Ensure trailing slash for repository subpath on GitHub Pages so asset URLs resolve accurately
       (function() {
+        if (window.location.hostname.endsWith('github.io') && !window.location.pathname.endsWith('/') && !window.location.pathname.includes('.')) {
+          window.location.replace(window.location.pathname + '/' + window.location.search + window.location.hash);
+          return;
+        }
+        // Decode GitHub Pages SPA redirect from 404.html if present
         var params = new URLSearchParams(window.location.search);
         var p = params.get('p');
         if (p) {
@@ -28,7 +33,7 @@
   </head>
   <body class="font-sans antialiased bg-white text-slate-900 select-none">
     <div id="root"></div>
-    <script type="module" src="./src/main.tsx"></script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
 

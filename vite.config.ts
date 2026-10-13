@@ -5,12 +5,13 @@ import { defineConfig } from 'vite';
 
 export default defineConfig(() => {
   return {
-    // Relative base ensures assets load on GitHub Pages, subpaths, and custom domains without 404
-    base: './',
+    // On GitHub Pages (CI), use exact repository path so scripts load with correct MIME types
+    // In local dev and AI Studio preview, use relative base
+    base: process.env.GITHUB_REPOSITORY ? `/${process.env.GITHUB_REPOSITORY.split('/')[1]}/` : './',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, '.'),
+        '@': path.resolve('.'),
       },
     },
     server: {

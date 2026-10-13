@@ -37,7 +37,9 @@ jobs:
         run: npm run build
 
       - name: Copy index.html to 404.html for GitHub Pages SPA routing
-        run: cp dist/index.html dist/404.html
+        run: |
+          cp dist/index.html dist/404.html
+          touch dist/.nojekyll
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v4
