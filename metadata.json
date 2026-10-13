@@ -1,0 +1,6 @@
+{
+  "name": "Kitty AI Voice & Desktop Pet Assistant",
+  "description": "Interactive smart pet companion and voice assistant with lip-sync animations, custom offline Sense Brain, speech recognition, and floatable desktop mode.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
